@@ -66,7 +66,7 @@ def callback():
             continue
         if not isinstance(event.message, TextMessage):
             continue
-        result = ph.read(event.message.text)
+        result = f.read(event.message.text)
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=result)
